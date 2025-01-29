@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary's Portfolio</title>
+    <link rel="stylesheet" href="my port.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul class="menu-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#blog">Blog</a></li> 
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h3>Hi, I'm <span>Mary</span></h3>
+            <h1><span>F</span>RONTEND <span>D</span>EVELOPER</h1>
+            <p>I'm a passionate frontend developer learning new skills to create amazing web experiences.</p>
+        </div>
+        <div class="img-box">
+            <img src="my portfolio pic.jpg" alt="My photo">
+        </div>
+    </section>
+
+    <div class="icons">
+        <a href="http://linkedin.com/in/adewumi-mary-b451ab297" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="https://www.instagram.com/tobas_cakes_n_treats?igsh=ZHZyNzEycWF4dXU1&utm_source=qr" target="_blank"><ion-icon name="logo-instagram" ></ion-icon></a>
+        <a href="https://x.com/toba_2204?s=21"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="https://github.com/Mary-Adewumi" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+    </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Mary Adewumi, an aspiring Frontend Developer from Lagos, Nigeria. I’m passionate about creating beautiful and functional websites. I am always learning new technologies and improving my skills to build amazing web experiences.</p>
+        <p>Skills: HTML, CSS, JavaScript</p>
+    </section>
+    
+
+    <section id="projects">
+        <p><i>here are few of my project</i></p>
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>A description of this project.</p>
+            <a href="http://127.0.0.1:5500/Revslon/Basics%20project.html" target="_blank" class="btn"> view project 1</a>
+        </div>
+        
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>A description of this project.</p>
+            <a href="http://127.0.0.1:5500/REVSLON%20wk2%20ass/TecHerdemy/frontend%20ass.html" target="_blank" class="btn"> view project 2</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me!</p>
+        
+        <!-- Contact Button -->
+        <button id="contactBtn" onclick="showThankYouMessage()">Contact Me</button>
+        
+        <!-- Contact Form -->
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    
+        <!-- Thank You Message (Hidden initially) -->
+        <div id="thankYouMessage" style="display: none;">
+            <p>Thank you for contacting us! We'll get back to you soon.</p>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2>Blog</h2>
+        <p>Coming soon...</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mary’s Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector(".menu-links");
+            menu.classList.toggle("open");
+        }
+        // Smooth scroll to the Contact section when the Contact Me button is clicked
+function scrollToContact() {
+    const contactSection = document.getElementById("contact");
+    contactSection.scrollIntoView({
+        behavior: "smooth"
+    });
+}
+// Show the "Thank You" message and hide the form when the Contact Me button is clicked
+function showThankYouMessage() {
+    // Hide the contact form
+    document.getElementById("contactForm").style.display = "none";
+
+    // Show the "Thank You" message
+    document.getElementById("thankYouMessage").style.display = "block";
+}
+
+
+    </script>
+
+</body>
+</html>
